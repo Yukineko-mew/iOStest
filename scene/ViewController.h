@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
 <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -17,5 +19,6 @@
 @property IBOutlet UIImageView *cameraView;
 
 -(IBAction)cameraStart:(id)sender;
+- (IBAction)buttonButtleStart:(id)sender;
 
 @end

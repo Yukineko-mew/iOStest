@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    SystemSoundID seButton;
+    AVAudioPlayer *bgm;
+}
 
 @end
 
@@ -21,11 +24,29 @@
     _comment.text = @"Start!";
     UIImage *initImage = [UIImage imageNamed:@"neko6.png"];
     [_cameraView setImage:initImage];
+    
+    //Sound Effect
+    NSString *pathSample3 = [[NSBundle mainBundle] pathForResource:@"sample3" ofType:@"mp3"];
+    NSURL *urlSample3 = [NSURL fileURLWithPath:pathSample3];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(urlSample3), &seButton);
+    
+    //BGM
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSError* error = nil;
+    bgm = [[AVAudioPlayer alloc] initWithContentsOfURL: url error: &error];
+    [bgm setNumberOfLoops:-1];
+    [bgm prepareToPlay];
+    [bgm play];
 }
 
 // This method is called when using camera
 - (IBAction)cameraStart:(id)sender
 {
+    //SE
+    AudioServicesPlaySystemSound(seButton);
+    
+    
     // camera is usable?
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     if([UIImagePickerController isSourceTypeAvailable:sourceType])
@@ -39,6 +60,12 @@
     } else {
         _comment.text = @"starting camera is failue";
     }
+}
+
+- (IBAction)buttonButtleStart:(id)sender {
+    AudioServicesPlaySystemSound(seButton);
+    [bgm stop];
+    [bgm prepareToPlay];
 }
 
 // This method is called when finish to take a picture
