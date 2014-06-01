@@ -28,6 +28,10 @@
 		9C66D9FB1939DED9009A48E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C66D9F91939DED9009A48E9 /* InfoPlist.strings */; };
 		9C66D9FD1939DED9009A48E9 /* sceneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C66D9FC1939DED9009A48E9 /* sceneTests.m */; };
 		9C66DA071939F22B009A48E9 /* neko6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66DA061939F22B009A48E9 /* neko6.png */; };
+		AF9219C0193B01D9006B2EFD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9219BF193B01D9006B2EFD /* AudioToolbox.framework */; };
+		AF9219C2193B0200006B2EFD /* sample3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9219C1193B0200006B2EFD /* sample3.mp3 */; };
+		AF9219C4193B0495006B2EFD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9219C3193B0495006B2EFD /* AVFoundation.framework */; };
+		AF9219C6193B0558006B2EFD /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9219C5193B0558006B2EFD /* sample2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		9C66D9FA1939DED9009A48E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C66D9FC1939DED9009A48E9 /* sceneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sceneTests.m; sourceTree = "<group>"; };
 		9C66DA061939F22B009A48E9 /* neko6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neko6.png; sourceTree = "<group>"; };
+		AF9219BF193B01D9006B2EFD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AF9219C1193B0200006B2EFD /* sample3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample3.mp3; sourceTree = "<group>"; };
+		AF9219C3193B0495006B2EFD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AF9219C5193B0558006B2EFD /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9219C4193B0495006B2EFD /* AVFoundation.framework in Frameworks */,
+				AF9219C0193B01D9006B2EFD /* AudioToolbox.framework in Frameworks */,
 				9C66D9D11939DED9009A48E9 /* CoreGraphics.framework in Frameworks */,
 				9C66D9D31939DED9009A48E9 /* UIKit.framework in Frameworks */,
 				9C66D9CF1939DED9009A48E9 /* Foundation.framework in Frameworks */,
@@ -117,6 +127,8 @@
 		9C66D9CD1939DED9009A48E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF9219C3193B0495006B2EFD /* AVFoundation.framework */,
+				AF9219BF193B01D9006B2EFD /* AudioToolbox.framework */,
 				9C66D9CE1939DED9009A48E9 /* Foundation.framework */,
 				9C66D9D01939DED9009A48E9 /* CoreGraphics.framework */,
 				9C66D9D21939DED9009A48E9 /* UIKit.framework */,
@@ -128,6 +140,8 @@
 		9C66D9D41939DED9009A48E9 /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				AF9219C5193B0558006B2EFD /* sample2.mp3 */,
+				AF9219C1193B0200006B2EFD /* sample3.mp3 */,
 				9C66DA061939F22B009A48E9 /* neko6.png */,
 				9C3E0F3D193A8B35003EC5D3 /* neko6 3.png */,
 				9C3E0F3E193A8B35003EC5D3 /* neko6 1.png */,
@@ -258,7 +272,9 @@
 				9C3E0F40193A8B35003EC5D3 /* neko6 3.png in Resources */,
 				9C3E0F42193A8B35003EC5D3 /* neko6 2.png in Resources */,
 				9C66DA071939F22B009A48E9 /* neko6.png in Resources */,
+				AF9219C2193B0200006B2EFD /* sample3.mp3 in Resources */,
 				9C66D9E21939DED9009A48E9 /* Main_iPhone.storyboard in Resources */,
+				AF9219C6193B0558006B2EFD /* sample2.mp3 in Resources */,
 				9C66D9D91939DED9009A48E9 /* InfoPlist.strings in Resources */,
 				9C3E0F41193A8B35003EC5D3 /* neko6 1.png in Resources */,
 			);
