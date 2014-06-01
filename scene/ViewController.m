@@ -46,16 +46,31 @@
 {
     _comment.text = @"finish takeing a picture";
     UIImage *cameraImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    // save the picture
+    UIImageWriteToSavedPhotosAlbum(cameraImage, self, @selector(savedPic:didFinishSavingWithError:contentInfo:), nil);
+    
+    // draw the picture
     [_cameraView setImage:cameraImage];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
     
 }
 
-// This method is called when failue starting camera
+// This method is called when failure starting camera
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)imagePicker
 {
     _comment.text = @"cancel camera";
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)savedPic:(UIImage *)image didFinishSavingWithError:(NSError *)error contentInfo:(void *)contentInfo
+{
+    if(error == nil)
+    {
+        // when saving photo is successed
+    } else {
+        // when saving photo is failure
+    }
 }
 
 - (void)didReceiveMemoryWarning
