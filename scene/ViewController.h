@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property IBOutlet UIButton *bCameraStart;
+@property IBOutlet UILabel *comment;
+
+@property IBOutlet UIImageView *cameraView;
+
+-(IBAction)cameraStart:(id)sender;
 
 @end
