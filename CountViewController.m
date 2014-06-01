@@ -99,7 +99,7 @@
 
 - (void)result:(id)sender
 {
-
+    
 }
 
 - (void)shake:(NSTimer *)timer
