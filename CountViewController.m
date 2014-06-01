@@ -91,7 +91,7 @@
         [ttm invalidate];
         shakeCountdown = 5;
     } else {
-        [_countLabel setText:[NSString stringWithFormat:@"%d", shakeCountdown]];
+        [_countLabel setText:[NSString stringWithFormat:@"%ld", (long)shakeCountdown]];
         shakeCountdown--;
     }
 
