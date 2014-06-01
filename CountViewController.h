@@ -13,6 +13,7 @@
 @property IBOutlet UIImageView *countView;
 @property IBOutlet UIButton *resultButton;
 @property IBOutlet UILabel *countLabel;
+@property IBOutlet UILabel *scouter;
 
 -(IBAction)result:(id)sender;
 
