@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96159529193D0DDF00388000 /* ReturnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96159528193D0DDF00388000 /* ReturnViewController.m */; };
 		9C3E0F40193A8B35003EC5D3 /* neko6 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E0F3D193A8B35003EC5D3 /* neko6 3.png */; };
 		9C3E0F41193A8B35003EC5D3 /* neko6 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E0F3E193A8B35003EC5D3 /* neko6 1.png */; };
 		9C3E0F42193A8B35003EC5D3 /* neko6 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E0F3F193A8B35003EC5D3 /* neko6 2.png */; };
 		9C3E0F4C193A9375003EC5D3 /* CountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E0F4A193A9375003EC5D3 /* CountViewController.m */; };
-		9C3E0F50193AB0BB003EC5D3 /* ReturnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E0F4F193AB0BB003EC5D3 /* ReturnViewController.m */; };
 		9C66D9CF1939DED9009A48E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66D9CE1939DED9009A48E9 /* Foundation.framework */; };
 		9C66D9D11939DED9009A48E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66D9D01939DED9009A48E9 /* CoreGraphics.framework */; };
 		9C66D9D31939DED9009A48E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66D9D21939DED9009A48E9 /* UIKit.framework */; };
@@ -45,13 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96159528193D0DDF00388000 /* ReturnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReturnViewController.m; sourceTree = SOURCE_ROOT; };
 		9C3E0F3D193A8B35003EC5D3 /* neko6 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "neko6 3.png"; sourceTree = "<group>"; };
 		9C3E0F3E193A8B35003EC5D3 /* neko6 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "neko6 1.png"; sourceTree = "<group>"; };
 		9C3E0F3F193A8B35003EC5D3 /* neko6 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "neko6 2.png"; sourceTree = "<group>"; };
 		9C3E0F49193A9375003EC5D3 /* CountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountViewController.h; path = ../CountViewController.h; sourceTree = "<group>"; };
 		9C3E0F4A193A9375003EC5D3 /* CountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountViewController.m; path = ../CountViewController.m; sourceTree = "<group>"; };
 		9C3E0F4E193AB0BB003EC5D3 /* ReturnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReturnViewController.h; path = ../ReturnViewController.h; sourceTree = "<group>"; };
-		9C3E0F4F193AB0BB003EC5D3 /* ReturnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReturnViewController.m; path = ../ReturnViewController.m; sourceTree = "<group>"; };
 		9C66D9CB1939DED9009A48E9 /* scene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C66D9CE1939DED9009A48E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C66D9D01939DED9009A48E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3E0F4E193AB0BB003EC5D3 /* ReturnViewController.h */,
-				9C3E0F4F193AB0BB003EC5D3 /* ReturnViewController.m */,
+				96159528193D0DDF00388000 /* ReturnViewController.m */,
 				9C66D9E61939DED9009A48E9 /* ViewController.h */,
 				9C66D9E71939DED9009A48E9 /* ViewController.m */,
 				9C3E0F49193A9375003EC5D3 /* CountViewController.h */,
@@ -300,7 +300,7 @@
 			files = (
 				9C3E0F4C193A9375003EC5D3 /* CountViewController.m in Sources */,
 				9C66D9E81939DED9009A48E9 /* ViewController.m in Sources */,
-				9C3E0F50193AB0BB003EC5D3 /* ReturnViewController.m in Sources */,
+				96159529193D0DDF00388000 /* ReturnViewController.m in Sources */,
 				9C66D9DF1939DED9009A48E9 /* AppDelegate.m in Sources */,
 				9C66D9DB1939DED9009A48E9 /* main.m in Sources */,
 			);

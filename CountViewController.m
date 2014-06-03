@@ -97,9 +97,15 @@
     start=YES;
 }
 
-- (void)result:(id)sender
+- (IBAction)result:(id)sender
 {
+    // 値を異なるビューへ渡す
+    ReturnViewController *secondViewController = [[ReturnViewController alloc] init];
+    NSString *str2 = [NSString stringWithFormat:@"%f", power*4.5];
+    [secondViewController setSvStr:str2];
     
+    // 画面遷移
+    [self.navigationController pushViewController:secondViewController animated:YES];
 }
 
 - (void)shake:(NSTimer *)timer
@@ -128,9 +134,19 @@
         CMAccelerometerHandler handler = ^(CMAccelerometerData *data, NSError *error) {
             // double timestamp = data.timestamp;
             if (start == YES){
-                power=  power+ fabs(data.acceleration.x)+fabs(data.acceleration.y)+fabs(data.acceleration.z);
-                _scouter.text = [NSString stringWithFormat:@"スカウター:%lf",power];
-                [_countLabel setText:[NSString stringWithFormat:@"%ld", (long)shakeCountdown]];
+                
+                //重力以外の加速度を足す
+                if(data.acceleration.x>=1){
+                    power = power + fabs(data.acceleration.x);
+                }
+                if(data.acceleration.y>=1){
+                    power = power + fabs(data.acceleration.y);
+                }
+                if(data.acceleration.z>=1){
+                    power = power + fabs(data.acceleration.z);
+                }
+                _scouter.text = [NSString stringWithFormat:@"あなたのパワー:%d",(int)(power*4.5)];
+                [_countLabel setText:[NSString stringWithFormat:@"%ld", (long)shakeCountdown/100]];
                 shakeCountdown--;
             }
             if (shakeCountdown==0) {
@@ -138,6 +154,11 @@
                 start=NO;
                 [ttm invalidate];
                 shakeCountdown=500;
+                
+                // 値を異なるビューへ渡す
+                ReturnViewController *returnViewController = [[ReturnViewController alloc] init];
+                NSString *str2 = [NSString stringWithFormat:@"%f", power*4.5];
+                [returnViewController setSvStr:str2];
             }
         };
         // センサーの利用開始

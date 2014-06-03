@@ -45,17 +45,25 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonButtleStart:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2IO-1K-Xdc"/>
-                                    <segue destination="6Nn-yM-OL6" kind="modal" id="VDh-eP-wKK"/>
+                                    <segue destination="6Nn-yM-OL6" kind="modal" identifier="battle" id="bt7-t0-LRV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="　" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-CJ-LQW">
+                                <rect key="frame" x="130" y="326" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VGr-17-qnv"/>
                     <connections>
-                        <outlet property="bCameraStart" destination="NBJ-qq-Csb" id="aa1-XR-gy1"/>
+                        <outlet property="bCameraStart" destination="NBJ-qq-Csb" id="TNG-k9-8id"/>
                         <outlet property="cameraView" destination="zSe-tu-O7W" id="pmj-qg-4ZX"/>
                         <outlet property="comment" destination="DjI-E7-xfk" id="LQj-xs-6NM"/>
+                        <outlet property="enemyPower" destination="xMv-CJ-LQW" id="6Ra-40-UoD"/>
                         <outlet property="view" destination="kh9-bI-dsS" id="OgX-tO-UWV"/>
                     </connections>
                 </viewController>
@@ -86,12 +94,12 @@
                         <viewControllerLayoutGuide type="top" id="SdG-fm-iXo"/>
                         <viewControllerLayoutGuide type="bottom" id="1p0-PG-r1x"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SkP-id-zFw">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="battle" id="SkP-id-zFw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tWg-SF-FMA">
-                                <rect key="frame" x="20" y="144" width="280" height="280"/>
+                                <rect key="frame" x="20" y="106" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-HG-emL">
@@ -105,8 +113,8 @@
                                     <segue destination="kBv-Cd-Umz" kind="modal" id="dlF-ff-oyH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysI-eD-2p2">
-                                <rect key="frame" x="139" y="77" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="５" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysI-eD-2p2">
+                                <rect key="frame" x="139" y="77" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -118,9 +126,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="enemy power: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-G2-5CD">
+                                <rect key="frame" x="59" y="394" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHAKE!!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFS-GM-fPu">
+                                <rect key="frame" x="119" y="40" width="82" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="i4s-y6-8wE"/>
                     <connections>
                         <outlet property="countLabel" destination="ysI-eD-2p2" id="cW8-2n-K8v"/>
                         <outlet property="countView" destination="tWg-SF-FMA" id="KiJ-Uq-awg"/>
@@ -131,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmH-yt-OKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="-498"/>
+            <point key="canvasLocation" x="616" y="-477"/>
         </scene>
         <!--Return View Controller-->
         <scene sceneID="fIX-d6-p3J">
@@ -145,8 +166,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="おたのしみに！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-Ta-4an">
-                                <rect key="frame" x="101" y="273" width="119" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたの勝ちです！！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-Ta-4an">
+                                <rect key="frame" x="30" y="273" width="261" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -162,10 +183,30 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="JOX-I1-gxb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi0-6d-0F9">
+                                <rect key="frame" x="48" y="107" width="104" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">enemy: 5320
+vs
+5543 
+vs
+55435320 
+vs
+5543</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you: 5551 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scZ-8i-ovg">
+                                <rect key="frame" x="71" y="152" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="score" destination="0mn-Ta-4an" id="5Gu-SN-In0"/>
                         <outlet property="view" destination="jBT-fq-5a6" id="IF3-OH-OvO"/>
                     </connections>
                 </viewController>

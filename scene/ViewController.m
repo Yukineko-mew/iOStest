@@ -72,6 +72,10 @@
 - (void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     _comment.text = @"finish takeing a picture";
+    
+    //相手のパワーを設定する。
+    _enemyPower.text = [NSString stringWithFormat:@"power: %d",arc4random() % 10000];
+    
     UIImage *cameraImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     // save the picture
@@ -80,7 +84,6 @@
     // draw the picture
     [_cameraView setImage:cameraImage];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
-    
 }
 
 // This method is called when failure starting camera

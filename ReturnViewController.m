@@ -14,6 +14,8 @@
 
 @implementation ReturnViewController
 
+@synthesize svStr;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _score.text = [NSString stringWithFormat:@"あなたのパワー:%@",svStr];
 }
 
 - (void)didReceiveMemoryWarning

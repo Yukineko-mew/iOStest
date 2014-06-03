@@ -15,10 +15,10 @@
 
 @property IBOutlet UIButton *bCameraStart;
 @property IBOutlet UILabel *comment;
-
+@property IBOutlet UILabel *enemyPower;
 @property IBOutlet UIImageView *cameraView;
 
--(IBAction)cameraStart:(id)sender;
+- (IBAction)cameraStart:(id)sender;
 - (IBAction)buttonButtleStart:(id)sender;
 
 @end
