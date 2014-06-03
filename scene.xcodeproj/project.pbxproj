@@ -32,6 +32,7 @@
 		AF9219C2193B0200006B2EFD /* sample3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9219C1193B0200006B2EFD /* sample3.mp3 */; };
 		AF9219C4193B0495006B2EFD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9219C3193B0495006B2EFD /* AVFoundation.framework */; };
 		AF9219C6193B0558006B2EFD /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9219C5193B0558006B2EFD /* sample2.mp3 */; };
+		AF921A10193E207D006B2EFD /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921A0F193E207D006B2EFD /* Singleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		AF9219C1193B0200006B2EFD /* sample3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample3.mp3; sourceTree = "<group>"; };
 		AF9219C3193B0495006B2EFD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF9219C5193B0558006B2EFD /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
+		AF921A0E193E207D006B2EFD /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		AF921A0F193E207D006B2EFD /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 		9C66D9D51939DED9009A48E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF921A0E193E207D006B2EFD /* Singleton.h */,
+				AF921A0F193E207D006B2EFD /* Singleton.m */,
 				9C3E0F4E193AB0BB003EC5D3 /* ReturnViewController.h */,
 				96159528193D0DDF00388000 /* ReturnViewController.m */,
 				9C66D9E61939DED9009A48E9 /* ViewController.h */,
@@ -301,6 +306,7 @@
 				9C3E0F4C193A9375003EC5D3 /* CountViewController.m in Sources */,
 				9C66D9E81939DED9009A48E9 /* ViewController.m in Sources */,
 				96159529193D0DDF00388000 /* ReturnViewController.m in Sources */,
+				AF921A10193E207D006B2EFD /* Singleton.m in Sources */,
 				9C66D9DF1939DED9009A48E9 /* AppDelegate.m in Sources */,
 				9C66D9DB1939DED9009A48E9 /* main.m in Sources */,
 			);

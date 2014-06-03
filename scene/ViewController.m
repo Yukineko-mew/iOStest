@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Singleton.h"
 
 @interface ViewController (){
     SystemSoundID seButton;
@@ -31,13 +32,9 @@
     AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(urlSample3), &seButton);
     
     //BGM
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"mp3"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    NSError* error = nil;
-    bgm = [[AVAudioPlayer alloc] initWithContentsOfURL: url error: &error];
-    [bgm setNumberOfLoops:-1];
-    [bgm prepareToPlay];
-    [bgm play];
+    [[Singleton bgm1] setNumberOfLoops:-1];
+    [[Singleton bgm1] prepareToPlay];
+    [[Singleton bgm1] play];
 }
 
 // This method is called when using camera
@@ -64,8 +61,8 @@
 
 - (IBAction)buttonButtleStart:(id)sender {
     AudioServicesPlaySystemSound(seButton);
-    [bgm stop];
-    [bgm prepareToPlay];
+    [[Singleton bgm1] stop];
+    [[Singleton bgm1] prepareToPlay];
 }
 
 // This method is called when finish to take a picture
