@@ -31,8 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _enemyScore.text = [NSString stringWithFormat:@"enemy:%d",(int)[Singleton power2]];
-    _myScore.text = [NSString stringWithFormat:@"you:%d",[Singleton enemyPower]];
+    _enemyScore.text = [NSString stringWithFormat:@"enemy:%d",[Singleton enemyPower]];
+    _myScore.text = [NSString stringWithFormat:@"you:%d",(int)[Singleton power2]];
     if([Singleton power2]>= [Singleton enemyPower]){
         _score.text = @"You Win!!";
     }
