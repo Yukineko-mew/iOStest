@@ -28,4 +28,44 @@
     return [Singleton instance].bgm1;
 }
 
++ (Singleton*) powerInstance
+{
+    static Singleton *powerInstance = nil;
+    if(powerInstance == nil){
+        powerInstance = [[Singleton alloc] init];
+        powerInstance.power2 = 0;
+    }
+    return powerInstance;
+}
+
++ (double) power2
+{
+    return [Singleton powerInstance].power2;
+}
+
++ (void) setPower:(double)_power2
+{
+    [Singleton powerInstance].power2 = _power2;
+}
+
++ (Singleton*) enemyPowerInstance
+{
+    static Singleton *enemyPowerInstance = nil;
+    if(enemyPowerInstance == nil){
+        enemyPowerInstance = [[Singleton alloc] init];
+        enemyPowerInstance.enemyPower = 0;
+    }
+    return enemyPowerInstance;
+}
+
++ (int) enemyPower
+{
+    return [Singleton enemyPowerInstance].enemyPower;
+}
+
++ (void) setEnemyPower:(int)_enemyPower
+{
+    [Singleton enemyPowerInstance].enemyPower = _enemyPower;
+}
+
 @end

@@ -12,6 +12,12 @@
 @interface Singleton : NSObject
 
 + (AVAudioPlayer *)bgm1;
++ (double)power2;
++ (int)enemyPower;
++ (void)setPower:(double)_power2;
++ (void)setEnemyPower:(int)_enemyPower;
+@property(nonatomic) double power2;
+@property(nonatomic) int enemyPower;
 @property(nonatomic) AVAudioPlayer *bgm1;
 
 @end

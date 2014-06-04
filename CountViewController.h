@@ -15,6 +15,7 @@
 @property IBOutlet UIButton *resultButton;
 @property IBOutlet UILabel *countLabel;
 @property IBOutlet UILabel *scouter;
+@property IBOutlet UILabel *enemy;
 
 -(IBAction)result:(id)sender;
 

@@ -71,7 +71,9 @@
     _comment.text = @"finish takeing a picture";
     
     //相手のパワーを設定する。
-    _enemyPower.text = [NSString stringWithFormat:@"power: %d",arc4random() % 10000];
+    int enemyPower2 = arc4random() % 10000;
+    [Singleton setEnemyPower: enemyPower2];
+    _enemyPower.text = [NSString stringWithFormat:@"power: %d",enemyPower2];
     
     UIImage *cameraImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     

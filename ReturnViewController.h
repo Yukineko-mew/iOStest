@@ -10,8 +10,10 @@
 
 @interface ReturnViewController : UIViewController
 
+@property IBOutlet  UILabel *enemyScore;
+@property IBOutlet  UILabel *myScore;
 @property IBOutlet  UILabel *score;
-@property (nonatomic,copy) NSString *svStr;
+//@property (nonatomic,copy) NSString *svStr;
 @property IBOutlet UIButton *returnButton;
 
 

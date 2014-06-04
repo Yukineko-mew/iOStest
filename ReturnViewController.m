@@ -7,6 +7,7 @@
 //
 
 #import "ReturnViewController.h"
+#import "Singleton.h"
 
 @interface ReturnViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation ReturnViewController
 
-@synthesize svStr;
+//@synthesize svStr;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _score.text = [NSString stringWithFormat:@"あなたのパワー:%@",svStr];
+    _enemyScore.text = [NSString stringWithFormat:@"enemy:%d",(int)[Singleton power2]];
+    _myScore.text = [NSString stringWithFormat:@"you:%d",[Singleton enemyPower]];
+    if([Singleton power2]>= [Singleton enemyPower]){
+        _score.text = @"You Win!!";
+    }
+    else{
+        _score.text = @"You Lose!!";
+    }
 }
 
 - (void)didReceiveMemoryWarning

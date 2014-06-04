@@ -119,7 +119,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたの戦闘力:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYN-Ma-d1Z">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="your Power:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYN-Ma-d1Z">
                                 <rect key="frame" x="20" y="501" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -145,6 +145,7 @@
                     <connections>
                         <outlet property="countLabel" destination="ysI-eD-2p2" id="cW8-2n-K8v"/>
                         <outlet property="countView" destination="tWg-SF-FMA" id="KiJ-Uq-awg"/>
+                        <outlet property="enemy" destination="8jK-G2-5CD" id="Dxl-wo-nti"/>
                         <outlet property="resultButton" destination="IkI-HG-emL" id="Mhl-HZ-WQN"/>
                         <outlet property="scouter" destination="bYN-Ma-d1Z" id="0ja-Sc-89I"/>
                         <outlet property="view" destination="SkP-id-zFw" id="yPg-cU-E3I"/>
@@ -206,6 +207,8 @@ vs
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="enemyScore" destination="Xi0-6d-0F9" id="qhW-ok-31Z"/>
+                        <outlet property="myScore" destination="scZ-8i-ovg" id="r5m-0w-71i"/>
                         <outlet property="score" destination="0mn-Ta-4an" id="5Gu-SN-In0"/>
                         <outlet property="view" destination="jBT-fq-5a6" id="IF3-OH-OvO"/>
                     </connections>

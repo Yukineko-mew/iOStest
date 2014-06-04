@@ -9,6 +9,7 @@
 #import "CountViewController.h"
 #import <CoreMotion/CoreMotion.h>
 #import "ViewController.h"
+#import "Singleton.h"
 
 @interface CountViewController (){
     NSInteger countdown;
@@ -55,6 +56,8 @@
     
     // CMAccelerometerDataの開始
     [self startCMAccelerometerData:frequency];
+    
+    _enemy.text = [NSString stringWithFormat:@"enemy Power:%d", [Singleton enemyPower]];
 
  
 }
@@ -101,8 +104,8 @@
 {
     // 値を異なるビューへ渡す
     ReturnViewController *secondViewController = [[ReturnViewController alloc] init];
-    NSString *str2 = [NSString stringWithFormat:@"%f", power*4.5];
-    [secondViewController setSvStr:str2];
+    //NSString *str2 = [NSString stringWithFormat:@"%f", power*4.5];
+    //[secondViewController setSvStr:str2];
     
     // 画面遷移
     [self.navigationController pushViewController:secondViewController animated:YES];
@@ -156,9 +159,10 @@
                 shakeCountdown=500;
                 
                 // 値を異なるビューへ渡す
-                ReturnViewController *returnViewController = [[ReturnViewController alloc] init];
-                NSString *str2 = [NSString stringWithFormat:@"%f", power*4.5];
-                [returnViewController setSvStr:str2];
+//                ReturnViewController *returnViewController = [[ReturnViewController alloc] init];
+//                NSString *str2 = [NSString stringWithFormat:@"%f", power*4.5];
+//                [returnViewController setSvStr:str2];
+                [Singleton setPower:power*4.5];
             }
         };
         // センサーの利用開始
