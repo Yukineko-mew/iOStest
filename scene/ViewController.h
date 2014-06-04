@@ -14,6 +14,7 @@
 <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property IBOutlet UIButton *bCameraStart;
+@property IBOutlet UIButton *bButtonButtleStart;
 @property IBOutlet UILabel *comment;
 @property IBOutlet UILabel *enemyPower;
 @property IBOutlet UIImageView *cameraView;

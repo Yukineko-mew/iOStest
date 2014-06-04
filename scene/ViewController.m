@@ -25,6 +25,8 @@
     _comment.text = @"Start!";
     UIImage *initImage = [UIImage imageNamed:@"neko6.png"];
     [_cameraView setImage:initImage];
+    _bButtonButtleStart.hidden = YES;
+    _bCameraStart.hidden = NO;
     
     //Sound Effect
     NSString *pathSample3 = [[NSBundle mainBundle] pathForResource:@"sample3" ofType:@"mp3"];
@@ -69,6 +71,8 @@
 - (void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     _comment.text = @"finish takeing a picture";
+    _bButtonButtleStart.hidden = NO;
+    _bCameraStart.hidden = YES;
     
     //相手のパワーを設定する。
     int enemyPower2 = arc4random() % 10000;

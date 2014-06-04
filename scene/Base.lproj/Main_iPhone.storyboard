@@ -60,6 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VGr-17-qnv"/>
                     <connections>
+                        <outlet property="bButtonButtleStart" destination="ahi-1c-OIc" id="HFS-sc-J8p"/>
                         <outlet property="bCameraStart" destination="NBJ-qq-Csb" id="TNG-k9-8id"/>
                         <outlet property="cameraView" destination="zSe-tu-O7W" id="pmj-qg-4ZX"/>
                         <outlet property="comment" destination="DjI-E7-xfk" id="LQj-xs-6NM"/>
