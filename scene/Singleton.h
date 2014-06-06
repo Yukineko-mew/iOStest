@@ -17,6 +17,7 @@
 + (void)setPower:(double)_power2;
 + (void)setEnemyPower:(int)_enemyPower;
 + (void)setBGM:(int)bgm;
+
 @property(nonatomic) double power2;
 @property(nonatomic) int enemyPower;
 @property(nonatomic) AVAudioPlayer *bgm1;

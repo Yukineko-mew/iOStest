@@ -83,5 +83,4 @@
 {
     [Singleton enemyPowerInstance].enemyPower = _enemyPower;
 }
-
 @end
