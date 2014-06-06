@@ -58,6 +58,12 @@
     [self startCMAccelerometerData:frequency];
     
     _enemy.text = [NSString stringWithFormat:@"enemy Power:%d", [Singleton enemyPower]];
+    
+    
+    //BGM
+    [[Singleton bgm1] setNumberOfLoops:-1];
+    [[Singleton bgm1] prepareToPlay];
+    [[Singleton bgm1] play];
 
  
 }
@@ -109,6 +115,10 @@
     
     // 画面遷移
     [self.navigationController pushViewController:secondViewController animated:YES];
+    
+    //BGM停止
+    [[Singleton bgm1] stop];
+    
 }
 
 - (void)shake:(NSTimer *)timer

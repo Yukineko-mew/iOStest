@@ -28,6 +28,8 @@
     return [Singleton instance].bgm1;
 }
 
+
+
 + (Singleton*) powerInstance
 {
     static Singleton *powerInstance = nil;
@@ -36,6 +38,20 @@
         powerInstance.power2 = 0;
     }
     return powerInstance;
+}
+
++ (void) setBGM:(int)bgm
+{
+    NSString *pathBGM;
+    if (bgm==1) {
+        pathBGM = [[NSBundle mainBundle] pathForResource:@"buttle" ofType:@"mp3"];
+    }else if (bgm == 2){
+        pathBGM = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"mp3"];
+    }else if (bgm == 3){
+        pathBGM = [[NSBundle mainBundle] pathForResource:@"fail" ofType:@"mp3"];
+    }
+    NSURL *urlBGM = [NSURL fileURLWithPath:pathBGM];
+    [Singleton instance].bgm1 = [[AVAudioPlayer alloc] initWithContentsOfURL:urlBGM error:nil];
 }
 
 + (double) power2

@@ -44,7 +44,7 @@
 {
     //SE
     AudioServicesPlaySystemSound(seButton);
-    
+    [Singleton setBGM:1];
     
     // camera is usable?
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -63,8 +63,9 @@
 
 - (IBAction)buttonButtleStart:(id)sender {
     AudioServicesPlaySystemSound(seButton);
-    [[Singleton bgm1] stop];
-    [[Singleton bgm1] prepareToPlay];
+//    [Singleton setBGM];
+//    [[Singleton bgm1] stop];
+//    [[Singleton bgm1] prepareToPlay];
 }
 
 // This method is called when finish to take a picture

@@ -33,6 +33,10 @@
 		AF9219C4193B0495006B2EFD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9219C3193B0495006B2EFD /* AVFoundation.framework */; };
 		AF9219C6193B0558006B2EFD /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9219C5193B0558006B2EFD /* sample2.mp3 */; };
 		AF921A10193E207D006B2EFD /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921A0F193E207D006B2EFD /* Singleton.m */; };
+		AF9D53991940B8A300E288C6 /* buttle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9D53981940B8A300E288C6 /* buttle.mp3 */; };
+		AF9D539B1940C81400E288C6 /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9D539A1940C81400E288C6 /* fail.mp3 */; };
+		AF9D539D1940C81C00E288C6 /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9D539C1940C81C00E288C6 /* start.mp3 */; };
+		AF9D539F1940C82300E288C6 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF9D539E1940C82300E288C6 /* win.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		AF9219C5193B0558006B2EFD /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
 		AF921A0E193E207D006B2EFD /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		AF921A0F193E207D006B2EFD /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		AF9D53981940B8A300E288C6 /* buttle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttle.mp3; sourceTree = "<group>"; };
+		AF9D539A1940C81400E288C6 /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
+		AF9D539C1940C81C00E288C6 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		AF9D539E1940C82300E288C6 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				AF9219C5193B0558006B2EFD /* sample2.mp3 */,
+				AF9D53981940B8A300E288C6 /* buttle.mp3 */,
 				AF9219C1193B0200006B2EFD /* sample3.mp3 */,
+				AF9D539A1940C81400E288C6 /* fail.mp3 */,
+				AF9D539E1940C82300E288C6 /* win.mp3 */,
+				AF9D539C1940C81C00E288C6 /* start.mp3 */,
 				9C66DA061939F22B009A48E9 /* neko6.png */,
 				9C3E0F3D193A8B35003EC5D3 /* neko6 3.png */,
 				9C3E0F3E193A8B35003EC5D3 /* neko6 1.png */,
@@ -277,13 +289,17 @@
 			files = (
 				9C66D9E51939DED9009A48E9 /* Main_iPad.storyboard in Resources */,
 				9C66D9EA1939DED9009A48E9 /* Images.xcassets in Resources */,
+				AF9D539B1940C81400E288C6 /* fail.mp3 in Resources */,
 				9C3E0F40193A8B35003EC5D3 /* neko6 3.png in Resources */,
 				9C3E0F42193A8B35003EC5D3 /* neko6 2.png in Resources */,
 				9C66DA071939F22B009A48E9 /* neko6.png in Resources */,
 				AF9219C2193B0200006B2EFD /* sample3.mp3 in Resources */,
 				9C66D9E21939DED9009A48E9 /* Main_iPhone.storyboard in Resources */,
 				AF9219C6193B0558006B2EFD /* sample2.mp3 in Resources */,
+				AF9D539F1940C82300E288C6 /* win.mp3 in Resources */,
+				AF9D539D1940C81C00E288C6 /* start.mp3 in Resources */,
 				9C66D9D91939DED9009A48E9 /* InfoPlist.strings in Resources */,
+				AF9D53991940B8A300E288C6 /* buttle.mp3 in Resources */,
 				9C3E0F41193A8B35003EC5D3 /* neko6 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

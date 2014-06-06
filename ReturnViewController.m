@@ -34,9 +34,15 @@
     _enemyScore.text = [NSString stringWithFormat:@"enemy:%d",[Singleton enemyPower]];
     _myScore.text = [NSString stringWithFormat:@"you:%d",(int)[Singleton power2]];
     if([Singleton power2]>= [Singleton enemyPower]){
+        [Singleton setBGM:2];
+        [[Singleton bgm1] prepareToPlay];
+        [[Singleton bgm1] play];
         _score.text = @"You Win!!";
     }
     else{
+        [Singleton setBGM:3];
+        [[Singleton bgm1] prepareToPlay];
+        [[Singleton bgm1] play];
         _score.text = @"You Lose!!";
     }
 }
