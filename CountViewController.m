@@ -10,6 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "ViewController.h"
 #import "Singleton.h"
+#import <AudioToolbox/AudioServices.h>
 
 @interface CountViewController (){
     NSInteger countdown;
@@ -157,6 +158,7 @@
                 start=NO;
                 [ttm invalidate];
                 shakeCountdown=500;
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                 
                 // 値を異なるビューへ渡す
 //                ReturnViewController *returnViewController = [[ReturnViewController alloc] init];

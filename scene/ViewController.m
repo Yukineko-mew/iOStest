@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    _comment.text = @"Start!";
+    _comment.text = @"Take a Picture!";
     UIImage *initImage = [UIImage imageNamed:@"neko6.png"];
     [_cameraView setImage:initImage];
     _bButtonButtleStart.hidden = YES;
