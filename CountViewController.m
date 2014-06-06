@@ -159,7 +159,7 @@
                 if(data.acceleration.z>=1){
                     power = power + fabs(data.acceleration.z);
                 }
-                _scouter.text = [NSString stringWithFormat:@"あなたのパワー:%d",(int)(power*4.5)];
+                //_scouter.text = [NSString stringWithFormat:@"あなたのパワー:%d",(int)(power*4.5)];
                 [_countLabel setText:[NSString stringWithFormat:@"%ld", (long)shakeCountdown/100]];
                 shakeCountdown--;
             }
